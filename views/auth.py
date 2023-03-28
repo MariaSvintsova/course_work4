@@ -94,6 +94,8 @@ class AuthView(Resource):
         email = req_json.get('email')
         password = req_json.get('password')
         role = req_json.get('role')
+        if role == None:
+            role = 'user'
 
 
         if password == None or email == None or role == None:
